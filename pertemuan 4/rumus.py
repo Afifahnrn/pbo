@@ -1,0 +1,3 @@
+import fungsi
+
+print(fungsi)
