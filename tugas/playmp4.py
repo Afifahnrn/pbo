@@ -7,7 +7,7 @@ class VideoPlayerApp:
         self.root = root
         self.root.title("Pemutar Video")
 
-        self.video_path = "C:/Users/nurkh/OneDrive/Documents/AFIFAH NURAINI/PBO/pertemuan 7/tugas/Animasi.mp4"
+        self.video_path = "C:/Users/nurkh/OneDrive/Documents/AFIFAH NURAINI/PBO/pertemuan 6/tugas/Animasi.mp4"
 
         self.canvas = tk.Canvas(root)
         self.canvas.pack(expand=tk.YES, fill=tk.BOTH)
