@@ -8,7 +8,7 @@ class MusicPlayerApp:
         self.root.title("Music Player")
 
         # Ganti path file MP3 sesuai dengan lokasi file
-        self.music_file = self.music_file = "C:/Users/nurkh/OneDrive/Documents/AFIFAH NURAINI/PBO/pertemuan 7/tugas/angel.mp3"
+        self.music_file = self.music_file = "C:/Users/nurkh/OneDrive/Documents/AFIFAH NURAINI/PBO/pertemuan 6/tugas/angel.mp3"
 
         self.label_artist = Label(root, text="AFIFAH NURAINI 220511027")
         self.label_artist.pack(pady=20, padx=5)
