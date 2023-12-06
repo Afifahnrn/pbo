@@ -11,7 +11,7 @@ class TextExtractorApp:
         self.path_to_tesseract = r'C:/Program Files/Tesseract-OCR/tesseract.exe'
 
         # Define path to image
-        self.path_to_image = "C:/Users/nurkh/OneDrive/Documents/AFIFAH NURAINI/PBO/pertemuan 7/tugas/gambar.jpg"
+        self.path_to_image = "C:/Users/nurkh/OneDrive/Documents/AFIFAH NURAINI/PBO/pertemuan 6/tugas/gambar.jpg"
 
         # Point tessaract_cmd to tessaract.exe
         pytesseract.tesseract_cmd = self.path_to_tesseract
