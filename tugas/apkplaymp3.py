@@ -1,4 +1,3 @@
-import os
 import pygame
 from tkinter import Tk, Button, Label
 
