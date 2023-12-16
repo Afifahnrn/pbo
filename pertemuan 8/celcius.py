@@ -23,6 +23,7 @@ val = C.get_celcius()
 F = C.get_fahrenheit()
 R = C.get_reamur()
 K = C.get_kelvin()
+
 print( str(val) + " Celcius, sama dengan:")
 print(str(F) + " Fahrenheit")
 print(str(R) + " Reamur")

@@ -1,7 +1,7 @@
 from tkinter import Frame, Label, Entry, Button, YES, BOTH, END, Tk, W
-from celcius import *
+from fahrenheit import *
 
-class FrmCelcius:
+class FrmFahrenheit:
     def __init__(self, parent, title):
         self.parent = parent
         self.parent.title(title)
@@ -13,17 +13,17 @@ class FrmCelcius:
         mainFrame.pack(fill=BOTH, expand=YES) 
 
 # menambahkan label
-        Label(mainFrame, text='Celcius:').grid(row=0, column=0, sticky=W, padx=5, pady=5)
-        Label(mainFrame, text="Fahrenheit:").grid(row=2, column=0, sticky=W, padx=5, pady=5)
+        Label(mainFrame, text='Fahrenheit:').grid(row=0, column=0, sticky=W, padx=5, pady=5)
+        Label(mainFrame, text="Celcius:").grid(row=2, column=0, sticky=W, padx=5, pady=5)
         Label(mainFrame, text="Kelvin:").grid(row=3, column=0, sticky=W, padx=5, pady=5)
         Label(mainFrame, text="Reamur:").grid(row=4, column=0, sticky=W, padx=5, pady=5)
 
 # menambahkan textbox
-        self.txtCelcius = Entry(mainFrame) 
-        self.txtCelcius.grid(row=0, column=1, padx=5, pady=5)  
-
         self.txtFahrenheit = Entry(mainFrame) 
-        self.txtFahrenheit.grid(row=2, column=1, padx=5, pady=5) 
+        self.txtFahrenheit.grid(row=0, column=1, padx=5, pady=5)  
+
+        self.txtCelcius = Entry(mainFrame) 
+        self.txtCelcius.grid(row=2, column=1, padx=5, pady=5) 
         
         self.txtKelvin = Entry(mainFrame) 
         self.txtKelvin.grid(row=3, column=1, padx=5, pady=5) 
@@ -36,14 +36,14 @@ class FrmCelcius:
         self.btnHitung.grid(row=1, column=1, padx=5, pady=5)
            
     def onHitung(self):
-        C = Celcius(int(self.txtCelcius.get()))
+        F = Fahrenheit(int(self.txtFahrenheit.get()))
 
-        F = C.get_fahrenheit()
-        K = C.get_kelvin()
-        R = C.get_reamur()
+        C = F.get_celcius()
+        K = F.get_kelvin()
+        R = F.get_reamur()
 
-        self.txtFahrenheit.delete(0, END)
-        self.txtFahrenheit.insert(END, str(F))
+        self.txtCelcius.delete(0, END)
+        self.txtCelcius.insert(END, str(C))
 
         self.txtKelvin.delete(0, END)
         self.txtKelvin.insert(END, str(K))
@@ -56,5 +56,5 @@ class FrmCelcius:
 
 if __name__ == '__main__':
     root = Tk()  
-    aplikasi = FrmCelcius(root, "Program Konversi Suhu Celcius")
+    aplikasi = FrmFahrenheit(root, "Program Konversi Suhu Fahrenheit")
     root.mainloop()
